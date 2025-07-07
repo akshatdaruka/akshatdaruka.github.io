@@ -1,0 +1,16 @@
+
+Robust Data Scrapper Utility
+Robust Data Scrapper Utility
+Apr 2022 - May 2022Apr 2022 - May 2022
+Company logo
+Associated with HighRadius
+Associated with HighRadius
+Constructed a java utility for the ARPA framework to capture the portals data without the use of writing regular expressions for it, earlier all the agents in the framework were using regular expression to capture web data if there were no export functionalities in the portal, this utility will help those agents to just call the functions of this utility and pass the browser response as parameter and it will be returning a JSON data response with parsed data, this save a lot of developer's time to write complex regular expression. The problem encountered while developing this utility was that in some cases the header level data were stored in a tabular form in the html response rather than in the division form, so I used whitespace between the header data that needed to be parsed and the data, the utility received after parsing, then split the result on the basis of the next header in the ArrayList of headers that needed to be parsed.
+Constructed a java utility for the ARPA framework to capture the portals data without the use of writing regular expressions for it, earlier all the agents in the framework were using regular expression to capture web data if there were no export functionalities in the portal, this utility will help those agents to just call the functions of this utility and pass the browser response as parameter and it will be returning a JSON data response with parsed data, this save a lot of developer's time to write complex regular expression. The problem encountered while developing this utility was that in some cases the header level data were stored in a tabular form in the html response rather than in the division form, so I used whitespace between the header data that needed to be parsed and the data, the utility received after parsing, then split the result on the basis of the next header in the ArrayList of headers that needed to be parsed.
+Generic Parser
+Generic Parser
+Oct 2021 - Dec 2021Oct 2021 - Dec 2021
+Company logo
+Associated with HighRadius
+Associated with HighRadius
+Developed a full stack project for the product in ARPA framework which helps to parse the files of different format using the layout information which can be given in the UI and then shows the parsed data in certain formats with file preview in the UI. Used Spring MVC for the backend and EXT JS for the frontend. The most difficult challenge during this project was that the framework was using an old version of ext.js, 6.0.2, so many frontend requirements were difficult to handle because many configurations were not supported.

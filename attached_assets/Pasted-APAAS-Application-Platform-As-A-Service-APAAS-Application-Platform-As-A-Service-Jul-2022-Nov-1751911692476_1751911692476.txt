@@ -1,0 +1,27 @@
+APAAS (Application Platform As A Service)
+APAAS (Application Platform As A Service)
+Jul 2022 - Nov 2022Jul 2022 - Nov 2022
+Company logo
+Associated with HighRadius
+Associated with HighRadius
+Implemented a number of back end Java agents for the APAAS framework, which gives developers a platform to create web pages with CRUD operations without writing any code and only using DSL.
+ Initiated TDD for the further agents and also written the JUNIT test cases using MOCKITO for the already existing agents.
+Used SPRINGBOOT for the backend and REACT JS for the frontend.
+Implemented a number of back end Java agents for the APAAS framework, which gives developers a platform to create web pages with CRUD operations without writing any code and only using DSL. Initiated TDD for the further agents and also written the JUNIT test cases using MOCKITO for the already existing agents. Used SPRINGBOOT for the backend and REACT JS for the frontend.
+Activity Log Analyzer
+Activity Log Analyzer
+Jul 2022 - Aug 2022Jul 2022 - Aug 2022
+Company logo
+Associated with HighRadius
+Associated with HighRadius
+Created this full stack project which let the user upload log files of different format and decide different user specific keys which will be used for parsing the file and displaying the derived data in structured format and preview the files and files history in user level all through the UI. The backend was built with Springboot, the database was MYSQL, and the frontend was built with REACT.JS. Created REST APIs for the CRUD and other operations. The most difficult aspect of this project was learning react.js. Having previously worked on ext.js for the frontend because the framework was built with it, learning all the new concepts of react including state, props, hooks, and so on was both challenging and fun. I learned about the advantages and convenience of using springboot with all of the annotations over spring and hibernate.
+Created this full stack project which let the user upload log files of different format and decide different user specific keys which will be used for parsing the file and displaying the derived data in structured format and preview the files and files history in user level all through the UI. The backend was built with Springboot, the database was MYSQL, and the frontend was built with REACT.JS. Created REST APIs for the CRUD and other operations. The most difficult aspect of this project was learning react.js. Having previously worked on ext.js for the frontend because the framework was built with it, learning all the new concepts of react including state, props, hooks, and so on was both challenging and fun. I learned about the advantages and convenience of using springboot with all of the annotations over spring and hibernate.
+ARPA (Advanced Robotic Process Automation)
+ARPA (Advanced Robotic Process Automation)
+Jun 2021 - Jul 2022Jun 2021 - Jul 2022
+Company logo
+Associated with HighRadius
+Associated with HighRadius
+Headed on the implementation, support and product development teams for ARPA (Advanced Robotic Process Automation), a framework that uses java agents to access client portals, collect data from there, and store it in a database. The structured data is then displayed in the UI for CPA (Claim and POD Automation) product. Worked on Core JAVA for the agents, SPRING MVC framework for backend and EXT JS for the front end.
+Created a number of new agents for company clients, improved the current agents to boost productivity, and brought in number of new functions and enhancements at the framework level to boost the effectiveness of the product. All the agents has to process large and bulky data with all the parsing tools to store the data in database. Some agents where the navigation were not possible with just JAVA and navigation XML files uses the SELENIUM tools for the navigating part.
+Headed on the implementation, 
