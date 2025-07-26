@@ -26,9 +26,9 @@ export default function Home() {
         <AboutSection />
         <ExperienceTimeline />
         <SkillsSection />
-        <ProjectsSection />
         <EducationSection />
         <CertificationsSection />
+        <ProjectsSection />
         <PersonalProjectsSection />
         <HobbiesSection />
         <ContactSection />
