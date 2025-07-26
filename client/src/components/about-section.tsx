@@ -40,7 +40,7 @@ export function AboutSection() {
               animate={isIntersecting ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.8, delay: 0.6 }}
             >
-              Currently pursuing a Master's in Data & Knowledge Engineering in Germany, I bring sharp technical skills, 
+              Currently pursuing a Master's in Data Science in Germany, I bring sharp technical skills, 
               deep product empathy, and a bias for action to every challenge I take on.
             </motion.p>
             
@@ -50,7 +50,7 @@ export function AboutSection() {
               animate={isIntersecting ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.8, delay: 0.8 }}
             >
-              {["Product Management", "Backend Development", "Data Engineering", "Strategy"].map((skill, index) => (
+              {["Product Management", "Software Development", "Data Science"].map((skill, index) => (
                 <motion.span
                   key={skill}
                   className="bg-blue-500/20 text-blue-500 px-4 py-2 rounded-full text-sm font-medium backdrop-blur-sm"
