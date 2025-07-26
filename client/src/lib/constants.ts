@@ -54,19 +54,6 @@ export const EXPERIENCE = [
     ],
     icon: "code",
     color: "accent"
-  },
-  {
-    id: "sde-intern",
-    title: "Software Development Intern",
-    company: "Highradius Corporation",
-    duration: "06.2021 – 06.2022",
-    achievements: [
-      "Directed intern squad",
-      "Deployed tokenization modules",
-      "Improved code delivery by 40%"
-    ],
-    icon: "graduation-cap",
-    color: "purple"
   }
 ];
 
