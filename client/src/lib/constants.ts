@@ -1,7 +1,7 @@
 export const PERSONAL_INFO = {
   name: "Akshat Daruka",
-  title: "Product Manager & Engineer",
-  subtitle: "Product Manager & Engineer crafting scalable solutions with developer precision and strategic mindset",
+  title: "Product Manager & Software Developer learning Data Science",
+  subtitle: "Bridging software, product, and data to build what truly matters.",
   email: "akshatdaruka@gmail.com",
   phone: "(+49) 15510795736",
   location: "Magdeburg, Germany",
@@ -16,9 +16,11 @@ export const EXPERIENCE = [
     company: "Family-Owned Manufacturing Business",
     duration: "01.2024 – 02.2025",
     achievements: [
-      "Cut manual reporting time by 40%",
-      "Increased KPI visibility by 25%",
-      "Projected 30% operational lag reduction"
+      "Cut manual reporting time by 30%",
+      "Roadmap for digitization and automation",
+      "Projected 20% operational lag reduction",
+      "Procurement, inventory, and vendor data tracking",
+      "Supply chain audits, identifying 15+ recurring bottlenecks"
     ],
     icon: "briefcase",
     color: "accent"
@@ -26,12 +28,14 @@ export const EXPERIENCE = [
   {
     id: "product-executive",
     title: "Product Executive",
-    company: "Associated Broadcasting Co. (TV9)",
+    company: "TV9",
     duration: "01.2023 – 12.2023",
     achievements: [
       "Improved organic traffic by 150%",
       "Increased retention by 44%",
-      "Reduced cycle time by 20%"
+      "Increased engagement time by 156%",
+      "Authored 20+ detailed PRDs",
+      "Re-architected site architecture to reduce LCP and TBT by 40%"
     ],
     icon: "tv",
     color: "purple"
@@ -40,11 +44,13 @@ export const EXPERIENCE = [
     id: "associate-sde",
     title: "Associate Software Engineer",
     company: "Highradius Corporation",
-    duration: "06.2022 – 12.2022",
+    duration: "06.2021 – 12.2022",
     achievements: [
-      "Engineered Spring Boot services",
-      "Automated CRUD generation",
-      "Maintained >90% test coverage"
+      "APAAS and Advanced RPA tools used across B2B clients",
+      "Constructed REST APIs handling 100K+ daily events",
+      "Maintained >90% test coverage",
+      "Resolved 30+ bugs per sprint",
+      "Maintained 95% on-time delivery rate across 4 consecutive releases"
     ],
     icon: "code",
     color: "accent"
@@ -67,7 +73,7 @@ export const EXPERIENCE = [
 export const EDUCATION = [
   {
     id: "masters",
-    institution: "Otto-von-Guericke University Magdeburg",
+    institution: "OVGU - Otto-von-Guericke University",
     degree: "Master's degree",
     field: "Data Science",
     duration: "Apr 2025 - Apr 2027",
@@ -132,7 +138,7 @@ export const PROFESSIONAL_PROJECTS = [
   },
   {
     id: "arpa",
-    title: "ARPA Framework",
+    title: "Advanced RPA Framework",
     description: "Advanced Robotic Process Automation framework using Java agents to access client portals and collect structured data.",
     technologies: ["Java", "Spring MVC", "Selenium", "Ext JS"],
     image: "https://images.unsplash.com/photo-1518186285589-2f7649de83e0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=400",
@@ -195,7 +201,7 @@ export const PERSONAL_PROJECTS = [
 export const CERTIFICATIONS = [
   {
     id: "product-led",
-    title: "Product-led Certification",
+    title: "Product-Led Certification",
     issuer: "Pendo.io",
     date: "Apr 2024",
     credentialUrl: "https://www.credly.com/badges/1ed45128-cb39-448d-b5d9-9b7a33391cc7/public_url",
@@ -288,29 +294,71 @@ export const SKILLS = [
     icon: "chart-line",
     color: "accent",
     skills: [
-      { name: "Strategy & Development", level: 95 },
-      { name: "UX Design", level: 85 },
-      { name: "Analytics", level: 90 }
+      { name: "Product Roadmapping", level: 95 },
+      { name: "Agile, Scrum & Sprint Planning", level: 95 },
+      { name: "PRD & BRD Documentation", level: 90 },
+      { name: "User Journey Mapping", level: 90 },
+      { name: "Prioritization and Stakeholder Communication", level: 90 }
     ]
   },
   {
     category: "Software Development",
-    icon: "code",
+    icon: "chart-line",
     color: "purple",
     skills: [
-      { name: "Java & Spring Boot", level: 90 },
-      { name: "React & JavaScript", level: 85 },
-      { name: "Python & Data", level: 80 }
+      { name: "MVC Architecture", level: 90 },
+      { name: "RESTful API Design", level: 95 },
+      { name: "Object-Oriented Programming", level: 95 },
+      { name: "Modular Codebase Planning", level: 80 },
+      { name: "Backend Systems Integration", level: 80 }
     ]
   },
   {
-    category: "Project Management",
-    icon: "project-diagram",
+    category: "Programming Languages",
+    icon: "chart-line",
     color: "accent",
     skills: [
-      { name: "Agile & Scrum", level: 95 },
-      { name: "Stakeholder Management", level: 90 },
-      { name: "JIRA & Tools", level: 85 }
+      { name: "Java", level: 95 },
+      { name: "Python", level: 90 },
+      { name: "JavaScript", level: 85 },
+      { name: "SQL", level: 95 },
+      { name: "Bash", level: 80 }
     ]
-  }
+  },
+  {
+    category: "Analytics",
+    icon: "chart-line",
+    color: "purple",
+    skills: [
+      { name: "KPI Tracking & Product Analytics", level: 95 },
+      { name: "Advanced Excel", level: 90 },
+      { name: "Looker", level: 85 },
+      { name: "Google Analytics", level: 90 },
+      { name: "Tableau", level: 80 }
+    ]
+  },
+  {
+    category: "DevOps & Database Tools",
+    icon: "chart-line",
+    color: "accent",
+    skills: [
+      { name: "Git", level: 95 },
+      { name: "Jira", level: 95 },
+      { name: "Jenkins", level: 85 },
+      { name: "MySQL", level: 95 },
+      { name: "DBMS", level: 95 }
+    ]
+  },
+  {
+    category: "Framework",
+    icon: "chart-line",
+    color: "purple",
+    skills: [
+      { name: "Spring", level: 95 },
+      { name: "React.js", level: 95 },
+      { name: "Hibernate ORM", level: 85 },
+      { name: "Pandas", level: 75 },
+      { name: "Scikit-learn", level: 75 }
+    ]
+  },
 ];
