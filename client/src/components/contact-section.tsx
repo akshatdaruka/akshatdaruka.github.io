@@ -33,6 +33,7 @@ export function ContactSection() {
         title: "Heads up! This form is taking a coffee break.",
         description: "For now, could you please send your message directly via email? I've kept your text in the form, so you can just copy-paste. Cheers!",
         variant: "destructive",
+        duration: 20000,
       });
     },
   });
