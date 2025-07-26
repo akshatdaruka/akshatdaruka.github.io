@@ -93,6 +93,7 @@ export function Navigation() {
             </div>
 
             <div className="flex items-center space-x-4">
+              {/*
               <motion.button
                 onClick={toggleTheme}
                 className="p-2 rounded-full bg-white/10 dark:bg-white/10 border border-white/20 dark:border-white/20 hover:bg-white/20 dark:hover:bg-white/20 transition-colors"
@@ -105,6 +106,7 @@ export function Navigation() {
                   <Moon className="w-5 h-5 text-blue-500" />
                 )}
               </motion.button>
+              */}
 
               <button
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
