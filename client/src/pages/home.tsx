@@ -28,8 +28,8 @@ export default function Home() {
         <SkillsSection />
         <ProjectsSection />
         <EducationSection />
-        <PersonalProjectsSection />
         <CertificationsSection />
+        <PersonalProjectsSection />
         <HobbiesSection />
         <ContactSection />
       </main>
