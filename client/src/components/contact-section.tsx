@@ -6,6 +6,10 @@ import { useState } from "react";
 import { useMutation } from "@tanstack/react-query";
 import { apiRequest } from "@/lib/queryClient";
 import { useToast } from "@/hooks/use-toast";
+import { z } from "zod";
+import { insertContactSchema } from "@/shared/schema";
+
+type FormErrors = Partial<Record<keyof typeof insertContactSchema.shape, string>>;
 
 export function ContactSection() {
   const { ref, isIntersecting } = useIntersectionObserver({ threshold: 0.1 });
@@ -17,6 +21,8 @@ export function ContactSection() {
     message: "",
   });
 
+  const [errors, setErrors] = useState<FormErrors>({});
+
   const contactMutation = useMutation({
     mutationFn: async (data: typeof formData) => {
       return await apiRequest("POST", "/api/contact", data);
@@ -27,10 +33,11 @@ export function ContactSection() {
         description: "I'll get back to you soon.",
       });
       setFormData({ name: "", email: "", subject: "", message: "" });
+      setErrors({}); // Clear errors on success
     },
     onError: (error) => {
       toast({
-        title: "Heads up! This form is taking a coffee break.",
+        title: "Oh no, this form is taking a coffee break!",
         description: "For now, could you please send your message directly via email? I've kept your text in the form, so you can just copy-paste. Cheers!",
         variant: "destructive",
         duration: 20000,
@@ -40,14 +47,34 @@ export function ContactSection() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    contactMutation.mutate(formData);
+    setErrors({}); 
+
+    try {
+      insertContactSchema.parse(formData);
+      
+      contactMutation.mutate(formData);
+
+    } catch (error) {
+      if (error instanceof z.ZodError) {
+        const formattedErrors: FormErrors = {};
+        error.errors.forEach((err) => {
+          if (err.path[0]) {
+            formattedErrors[err.path[0] as keyof FormErrors] = err.message;
+          }
+        });
+        setErrors(formattedErrors);
+      }
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormData(prev => ({
-      ...prev,
-      [e.target.name]: e.target.value,
-    }));
+    const { name, value } = e.target;
+    setFormData(prev => ({ ...prev, [name]: value }));
+    
+    // Clear the error for the field being edited
+    if (errors[name as keyof FormErrors]) {
+      setErrors(prev => ({ ...prev, [name]: undefined }));
+    }
   };
 
   return (
@@ -79,10 +106,7 @@ export function ContactSection() {
             </div>
             
             <div className="space-y-6">
-              <motion.div
-                className="flex items-center space-x-4"
-                whileHover={{ x: 5 }}
-              >
+              <motion.div className="flex items-center space-x-4" whileHover={{ x: 5 }}>
                 <div className="w-12 h-12 bg-blue-500/20 rounded-full flex items-center justify-center">
                   <Mail className="w-6 h-6 text-blue-500" />
                 </div>
@@ -91,11 +115,7 @@ export function ContactSection() {
                   <p className="text-black dark:text-white font-semibold">{PERSONAL_INFO.email}</p>
                 </div>
               </motion.div>
-              
-              <motion.div
-                className="flex items-center space-x-4"
-                whileHover={{ x: 5 }}
-              >
+              <motion.div className="flex items-center space-x-4" whileHover={{ x: 5 }}>
                 <div className="w-12 h-12 bg-blue-500/20 rounded-full flex items-center justify-center">
                   <Phone className="w-6 h-6 text-blue-500" />
                 </div>
@@ -104,11 +124,7 @@ export function ContactSection() {
                   <p className="text-black dark:text-white font-semibold">{PERSONAL_INFO.phone}</p>
                 </div>
               </motion.div>
-              
-              <motion.div
-                className="flex items-center space-x-4"
-                whileHover={{ x: 5 }}
-              >
+              <motion.div className="flex items-center space-x-4" whileHover={{ x: 5 }}>
                 <div className="w-12 h-12 bg-blue-500/20 rounded-full flex items-center justify-center">
                   <MapPin className="w-6 h-6 text-blue-500" />
                 </div>
@@ -138,6 +154,7 @@ export function ContactSection() {
                   className="w-full px-4 py-3 rounded-lg bg-white/5 dark:bg-white/5 border border-white/20 dark:border-white/10 text-black dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
                   placeholder="Your Name"
                 />
+                {errors.name && <p className="text-red-500 text-sm mt-1">{errors.name}</p>}
               </div>
               
               <div>
@@ -151,6 +168,7 @@ export function ContactSection() {
                   className="w-full px-4 py-3 rounded-lg bg-white/5 dark:bg-white/5 border border-white/20 dark:border-white/10 text-black dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
                   placeholder="your.email@example.com"
                 />
+                {errors.email && <p className="text-red-500 text-sm mt-1">{errors.email}</p>}
               </div>
               
               <div>
@@ -164,6 +182,7 @@ export function ContactSection() {
                   className="w-full px-4 py-3 rounded-lg bg-white/5 dark:bg-white/5 border border-white/20 dark:border-white/10 text-black dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
                   placeholder="Project Discussion"
                 />
+                {errors.subject && <p className="text-red-500 text-sm mt-1">{errors.subject}</p>}
               </div>
               
               <div>
@@ -177,6 +196,7 @@ export function ContactSection() {
                   className="w-full px-4 py-3 rounded-lg bg-white/5 dark:bg-white/5 border border-white/20 dark:border-white/10 text-black dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all resize-none"
                   placeholder="Tell me about your project..."
                 />
+                {errors.message && <p className="text-red-500 text-sm mt-1">{errors.message}</p>}
               </div>
               
               <motion.button
@@ -199,4 +219,4 @@ export function ContactSection() {
       </div>
     </section>
   );
-}
+}```
