@@ -1,7 +1,7 @@
 // server/db.ts
 import { drizzle } from 'drizzle-orm/neon-http';
 import { neon } from '@neondatabase/serverless';
-import * as schema from '@shared/schema';
+import * as schema from '../src/shared/schema.js';
 
 // This checks if the DATABASE_URL is available in the environment secrets
 if (!process.env.DATABASE_URL) {
