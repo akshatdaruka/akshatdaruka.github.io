@@ -2,7 +2,7 @@
 import { createServer } from 'http';
 import { z } from 'zod';
 import { insertContactSchema } from '@shared/schema';
-import { db } from './db'; // Use our new database connection
+import { db } from './db.js'; // Use our new database connection
 import { contacts } from '@shared/schema'; // Import the contacts table schema
 
 export async function registerRoutes(app) {
