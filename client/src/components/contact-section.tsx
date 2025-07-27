@@ -135,6 +135,8 @@ export function ContactSection() {
                   value={formData.name}
                   onChange={handleChange}
                   required
+                  minLength="2"
+                  maxLength="100"
                   className="w-full px-4 py-3 rounded-lg bg-white/5 dark:bg-white/5 border border-white/20 dark:border-white/10 text-black dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
                   placeholder="Your Name"
                 />
@@ -148,6 +150,7 @@ export function ContactSection() {
                   value={formData.email}
                   onChange={handleChange}
                   required
+                  maxLength="100"
                   className="w-full px-4 py-3 rounded-lg bg-white/5 dark:bg-white/5 border border-white/20 dark:border-white/10 text-black dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
                   placeholder="your.email@example.com"
                 />
@@ -161,6 +164,8 @@ export function ContactSection() {
                   value={formData.subject}
                   onChange={handleChange}
                   required
+                  minLength="5"
+                  maxLength="300"
                   className="w-full px-4 py-3 rounded-lg bg-white/5 dark:bg-white/5 border border-white/20 dark:border-white/10 text-black dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
                   placeholder="Project Discussion"
                 />
@@ -174,6 +179,8 @@ export function ContactSection() {
                   onChange={handleChange}
                   required
                   rows={4}
+                  minLength="10"
+                  maxLength="5000"
                   className="w-full px-4 py-3 rounded-lg bg-white/5 dark:bg-white/5 border border-white/20 dark:border-white/10 text-black dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all resize-none"
                   placeholder="Tell me about your project..."
                 />
