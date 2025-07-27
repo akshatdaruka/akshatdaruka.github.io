@@ -1,9 +1,9 @@
 // server/routes.ts
 import { createServer } from 'http';
 import { z } from 'zod';
-import { insertContactSchema } from '@shared/schema';
+import { insertContactSchema } from '../src/shared/schema.js';
 import { db } from './db.js'; // Use our new database connection
-import { contacts } from '@shared/schema'; // Import the contacts table schema
+import { contacts } from '../src/shared/schema.js'; // Import the contacts table schema
 
 export async function registerRoutes(app) {
   // API Route to handle new contact form submissions
