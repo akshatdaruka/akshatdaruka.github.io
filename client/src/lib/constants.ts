@@ -12,13 +12,13 @@ export const PERSONAL_INFO = {
 export const EXPERIENCE = [
   {
     id: "product-manager",
-    title: "Product Manager",
+    title: "Project Manager",
     company: "Family-Owned Manufacturing Business",
-    duration: "01.2024 – 02.2025",
+    duration: "01.2024 – 12.2024",
     achievements: [
-      "Cut manual reporting time by 30%",
       "Roadmap for digitization and automation",
-      "Projected 20% operational lag reduction",
+      "Established methodologies for KPI tracking",
+      "Quantitative and qualitative analysis of operational workflows",
       "Procurement, inventory, and vendor data tracking",
       "Supply chain audits, identifying 15+ recurring bottlenecks"
     ],
